@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Edit Account</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+
+
+	<!-- INICIO -->
+	<div class="container mt-2 mb-3">
+	<h2>Transfer</h2>
+	<form class="w-50" th:action = "@{/saveTransfer}"  method="post" th:object="${transfer}">
+	 
+	 <!-- Prueba 
+	 <div class="form-group">
+	    <label for="selectorCurrencyTransfer">Currency</label>
+	    <select class="form-control" id="selectorCurrencyTransfer"  >
+	      	 <option></option>	      
+	    </select>
+	 </div>
+	 -->
+	 <!-- Fin prueba -->
+	 <div th:text="${errorText}" th:classappend="${errorText==''} ? 'd-none' : ''" class="alert alert-danger">
+			  
+	 </div>
+	 
+	 <div class="form-group">
+	    <label for="selectorAccountOrigin">Origin account</label>
+	    <select class="form-control" id="selectorAccountOrigin" th:field="*{accOrigin}" >
+	      	 <option th:value="${account.id}" th:text="'ID: '+ ${account.id} + ' - NAME: '+ ${account.name} + ' - CURR: ' + ${account.currency} + ' - BAL ' + ${account.balance}" th:if="${not #lists.isEmpty(accounts)}" th:each="account : ${accounts}">name</option>	      
+	    </select>
+	  </div>
+	  <div class="form-group">
+	   <label for="selectorAccountDestination">Destination account</label>
+	    <select class="form-control" id="selectorAccountDestination" th:field="*{accDestination}" >
+	      	 <option th:value="${account.id}" th:text="'ID: '+ ${account.id} + ' - NAME: '+ ${account.name} + ' - CURR: ' + ${account.currency} + ' - BAL ' + ${account.balance} " th:if="${not #lists.isEmpty(accounts)}" th:each="account : ${accounts}">name</option>	      
+	    </select>
+	  </div>
+	  <div class="form-group row">
+	    <label for="inputAmountTransfer" class="col-sm-2 col-form-label">Amount</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="inputAmountTransfer" th:field="*{amount}" required="required" >
+	    </div>
+	  </div>
+	    <div th:if="${#fields.hasErrors('amount')}" class="alert alert-danger">
+			  <strong>Error!</strong> Amount has to be a numeric value.
+		</div>
+	  
+	  <button type="submit" class="btn btn-primary">Transfer!</button>
+	  
+  
+	</form>
+	
+	
+	</div>
+	
+	
+
+	
+	<!-- FIN -->
+
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

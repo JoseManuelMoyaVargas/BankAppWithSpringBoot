@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+#containerTable{
+	max-height:400px;
+	overflow-y: scroll;
+}
+
+#selectorSearch{
+	width:20%;
+}
+
+.errorCode{
+	font-family: 'Fredoka One';
+    margin: 0px;
+    color: black;
+    text-transform: uppercase;
+    font-size: 200px;
+    
+}
+
+.errorParagraph{
+	font-family: 'Fredoka One';
+	color: grey;
+}
