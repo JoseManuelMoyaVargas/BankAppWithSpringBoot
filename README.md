@@ -12,7 +12,7 @@ java -jar target/accountServiceProject-0.0.1-SNAPSHOT.jar
 ```
 ## SCREENSHOTS
 
-Main menu
+### Main menu
 ![image1]( https://github.com/JoseManuelMoyaVargas/BankAppWithSpringBoot/blob/master/screenshots/1.png)
 
 Add account
