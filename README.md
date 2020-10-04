@@ -1,6 +1,6 @@
 # BankAppWithSpringBoot
 
-Account service app using Spring Boot MVC, Thymeleaf, Bootstrap, and Jquery. guidelines. It allows to create, access, find accounts, and to transfer money between
+Account service app using Spring Boot MVC, Thymeleaf, Bootstrap, and Jquery. It allows to create, access, find accounts, and to transfer money between
 them.
 
 
