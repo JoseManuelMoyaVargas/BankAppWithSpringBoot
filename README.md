@@ -10,6 +10,9 @@ You can build the package as a single artifact by running the `./mvnw clean inst
 ```
 java -jar target/accountServiceProject-0.0.1-SNAPSHOT.jar
 ```
+
+The app is running on localhost: 8080.
+
 ## SCREENSHOTS
 
 * Main menu
