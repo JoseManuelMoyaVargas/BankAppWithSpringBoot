@@ -35,7 +35,6 @@ public class AccountRest {
 		return "index";
 	}
 	
-	
 	@RequestMapping("/newAccount")
     public String newAccount(Model model){
         model.addAttribute("account", new Account());

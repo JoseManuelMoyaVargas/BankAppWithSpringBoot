@@ -23,7 +23,7 @@ public class AccountDAOTests {
 	
 	@BeforeEach 
     public void init() {
-		/* We add some accounts*/
+		//given
 		Account acc1 = new Account();
 		acc1.setBalance(new BigDecimal(100.0)); acc1.setCurrency(Currency.getInstance("USD"));
 		acc1.setName("Pablo");acc1.setTreasury(false);
